@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230319 13:54:24.347" rpa="false" schemaversion="3">
+<suite id="s1" name="Non Disponible Script" source="c:\Users\ronny\tutorial_ninja_Test\exigeance_07\non_disponible_script.robot">
+<test id="s1-t1" name="Test one" line="16">
+<kw name="On ouvre le browser" library="Keywords" type="SETUP">
+<kw name="Ouvrir le browser" library="Keywords">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<kw name="Set Selenium Timeout" library="Selenium2Library">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20230319 13:54:24.731" endtime="20230319 13:54:24.731"/>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<msg timestamp="20230319 13:54:24.732" level="INFO">Opening browser 'chrome' to base url 'http://tutorialsninja.com/demo/'.</msg>
+<status status="PASS" starttime="20230319 13:54:24.732" endtime="20230319 13:54:30.230"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230319 13:54:30.230" endtime="20230319 13:54:30.343"/>
+</kw>
+<status status="PASS" starttime="20230319 13:54:24.729" endtime="20230319 13:54:30.343"/>
+</kw>
+<status status="PASS" starttime="20230319 13:54:24.729" endtime="20230319 13:54:30.344"/>
+</kw>
+<kw name="produit non disponible" library="Keywords">
+<arg>Samsung</arg>
+<arg>Samsung SyncMaster 941BW</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_recherche}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 13:54:30.345" endtime="20230319 13:54:30.368"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_recherche}</arg>
+<arg>${Vtext_recherche}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230319 13:54:30.368" level="INFO">Typing text 'Samsung' into text field '//input[@name='search']'.</msg>
+<status status="PASS" starttime="20230319 13:54:30.368" endtime="20230319 13:54:30.463"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${btn_rechercher}</arg>
+<doc>Clicks button identified by ``locator``.</doc>
+<msg timestamp="20230319 13:54:30.464" level="INFO">Clicking button '//button[@class='btn btn-default btn-lg']'.</msg>
+<status status="PASS" starttime="20230319 13:54:30.464" endtime="20230319 13:54:31.270"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${frame_rechercher}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 13:54:31.271" endtime="20230319 13:54:31.334"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_produit_1}${vtitre_produit_by_title}${btn_produit_2}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 13:54:31.334" level="INFO">Clicking element '//img[@title='Samsung SyncMaster 941BW']'.</msg>
+<status status="PASS" starttime="20230319 13:54:31.334" endtime="20230319 13:54:33.483"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_add_to_cart}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 13:54:33.483" endtime="20230319 13:54:33.502"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${btn_add_to_cart}</arg>
+<doc>Clicks button identified by ``locator``.</doc>
+<msg timestamp="20230319 13:54:33.502" level="INFO">Clicking button '//button[@id='button-cart']'.</msg>
+<status status="PASS" starttime="20230319 13:54:33.502" endtime="20230319 13:54:33.552"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${frame_confirmation}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 13:54:33.552" endtime="20230319 13:54:33.998"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_panier}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 13:54:33.998" level="INFO">Clicking element '//span[normalize-space()='Shopping Cart']'.</msg>
+<status status="PASS" starttime="20230319 13:54:33.998" endtime="20230319 13:54:34.445"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_checkout}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 13:54:34.446" endtime="20230319 13:54:34.469"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_checkout}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20230319 13:54:34.469" level="INFO">Clicking element '//a[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20230319 13:54:34.469" endtime="20230319 13:54:35.136"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${frame_warning}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 13:54:35.137" endtime="20230319 13:54:35.161"/>
+</kw>
+<status status="PASS" starttime="20230319 13:54:30.344" endtime="20230319 13:54:35.161"/>
+</kw>
+<kw name="Fermer le browser" library="Keywords" type="TEARDOWN">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230319 13:54:35.162" endtime="20230319 13:54:37.328"/>
+</kw>
+<status status="PASS" starttime="20230319 13:54:35.162" endtime="20230319 13:54:37.328"/>
+</kw>
+<status status="PASS" starttime="20230319 13:54:24.727" endtime="20230319 13:54:37.329"/>
+</test>
+<test id="s1-t2" name="Test two" line="18">
+<kw name="On ouvre le browser" library="Keywords" type="SETUP">
+<kw name="Ouvrir le browser" library="Keywords">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<kw name="Set Selenium Timeout" library="Selenium2Library">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20230319 13:54:37.331" endtime="20230319 13:54:37.331"/>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<msg timestamp="20230319 13:54:37.332" level="INFO">Opening browser 'chrome' to base url 'http://tutorialsninja.com/demo/'.</msg>
+<status status="PASS" starttime="20230319 13:54:37.332" endtime="20230319 13:54:45.314"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230319 13:54:45.314" endtime="20230319 13:54:45.443"/>
+</kw>
+<status status="PASS" starttime="20230319 13:54:37.331" endtime="20230319 13:54:45.443"/>
+</kw>
+<status status="PASS" starttime="20230319 13:54:37.330" endtime="20230319 13:54:45.444"/>
+</kw>
+<kw name="Rechercher non disponible" library="Keywords">
+<arg>Samsunxxxx</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_recherche}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 13:54:45.444" endtime="20230319 13:54:45.466"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_recherche}</arg>
+<arg>${Vtext_recherche}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20230319 13:54:45.467" level="INFO">Typing text 'Samsunxxxx' into text field '//input[@name='search']'.</msg>
+<status status="PASS" starttime="20230319 13:54:45.466" endtime="20230319 13:54:45.547"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${btn_rechercher}</arg>
+<doc>Clicks button identified by ``locator``.</doc>
+<msg timestamp="20230319 13:54:45.548" level="INFO">Clicking button '//button[@class='btn btn-default btn-lg']'.</msg>
+<status status="PASS" starttime="20230319 13:54:45.548" endtime="20230319 13:54:45.970"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${frame_non_disponible }</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230319 13:54:45.970" endtime="20230319 13:54:46.009"/>
+</kw>
+<status status="PASS" starttime="20230319 13:54:45.444" endtime="20230319 13:54:46.010"/>
+</kw>
+<kw name="Fermer le browser" library="Keywords" type="TEARDOWN">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230319 13:54:46.010" endtime="20230319 13:54:48.169"/>
+</kw>
+<status status="PASS" starttime="20230319 13:54:46.010" endtime="20230319 13:54:48.169"/>
+</kw>
+<status status="PASS" starttime="20230319 13:54:37.330" endtime="20230319 13:54:48.170"/>
+</test>
+<doc>l'Utilisateur est informé lorsque le produit recherché n'est pas disponible</doc>
+<status status="PASS" starttime="20230319 13:54:24.354" endtime="20230319 13:54:48.171"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Non Disponible Script">Non Disponible Script</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
